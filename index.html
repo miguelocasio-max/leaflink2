@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Link - Plants That Speak to Your Soul</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --forest-green: #2d5016;
+            --sage-green: #87a96b;
+            --light-green: #c9d1c8;
+            --warm-brown: #8b4513;
+            --light-brown: #d2b48c;
+            --cream: #f5f5dc;
+            --gold: #daa520;
+        }
+        
+        body {
+            font-family: 'Lora', serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light-green) 100%);
+            color: var(--forest-green);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(45, 80, 22, 0.15);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-image {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--forest-green);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+        
+        .nav-menu a:hover {
+            background: var(--light-green);
+            color: var(--sage-green);
+        }
+        
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            background: radial-gradient(ellipse at center, rgba(135, 169, 107, 0.1) 0%, transparent 70%);
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: var(--forest-green);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-content .tagline {
+            font-size: 1.8rem;
+            color: var(--warm-brown);
+            margin-bottom: 2rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.85;
+            line-height: 1.8;
+        }
+        
+        .hero-visual {
+            text-align: center;
+            position: relative;
+        }
+        
+        .product-showcase {
+            background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            color: white;
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-showcase::before {
+            content: '🌿🎵🌿';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+        
+        .product-showcase h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-icon {
+            width: 200px;
+            height: 200px;
+            margin: 2rem auto;
+            display: block;
+            border-radius: 20px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .btn {
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, var(--sage-green), var(--forest-green));
+            color: white;
+            box-shadow: 0 6px 20px rgba(45, 80, 22, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.4);
+        }
+        
+        .features-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(135, 169, 107, 0.05) 100%);
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            text-align: center;
+            color: var(--forest-green);
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '🌸🌿🌸';
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            opacity: 0.6;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: center;
+            border: 2px solid var(--light-green);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.25);
+            border-color: var(--sage-green);
+        }
+        
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+        
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--forest-green);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: var(--warm-brown);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .how-it-works {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(245, 245, 220, 0.8) 0%, rgba(201, 209, 200, 0.3) 100%);
+        }
+        
+        .how-it-works-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .step-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: center;
+            border: 2px solid var(--light-green);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.1);
+        }
+        
+        .step-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.25);
+            border-color: var(--sage-green);
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--sage-green), var(--gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 5px 15px rgba(135, 169, 107, 0.3);
+        }
+        
+        .step-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--forest-green);
+            margin-bottom: 1.5rem;
+        }
+        
+        .step-card p {
+            color: var(--warm-brown);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .newsletter-section {
+            background: var(--forest-green);
+            color: var(--cream);
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .newsletter-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-section p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        .newsletter-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-form input,
+        .newsletter-form textarea,
+        .newsletter-form select {
+            padding: 1.2rem;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--forest-green);
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-form textarea {
+            grid-column: 1 / -1;
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .btn-secondary {
+            background: var(--gold);
+            color: var(--forest-green);
+            font-weight: 600;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--cream);
+            transform: translateY(-3px);
+        }
+        
+        .footer {
+            background: var(--warm-brown);
+            color: var(--cream);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .footer .logo {
+            color: var(--cream);
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header { padding: 1rem; flex-direction: column; gap: 1rem; }
+            .nav-menu { flex-wrap: wrap; justify-content: center; }
+            .hero-container { grid-template-columns: 1fr; text-align: center; }
+            .hero-content h1 { font-size: 3rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2.5rem; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .logo-image { width: 80px; height: 80px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="leaflinklogo.png" alt="Leaf Link Logo" class="logo-image">
+        </a>
+        <nav class="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#updates">Updates</a>
+        </nav>
+    </header>
+
+    <section class="hero-section" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Leaf Link</h1>
+                <p class="tagline">Plants That Speak to Your Soul</p>
+                <p>Experience the perfect harmony of nature and technology. Our innovative plant-in-a-box features a smart vase that plays personalized audio content when you scan the QR code. Transform your space into a living, breathing sanctuary that connects with you on a deeper level.</p>
+                <a href="#updates" class="btn btn-primary">Get Early Access</a>
+            </div>
+            <div class="hero-visual">
+                <div class="product-showcase">
+                    <h3>Smart Plant Experience</h3>
+                    <img src="leafimage.png" alt="Smart Plant" class="product-icon">
+                    <p>Scan • Listen • Connect</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section" id="features">
+        <div class="features-container">
+            <h2 class="section-title">Why Plant Lovers Choose Leaf Link</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🌱</span>
+                    <h3>Premium Plants</h3>
+                    <p>Hand-selected, healthy plants perfect for your home environment. Each plant comes with care instructions and thrives in indoor conditions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎵</span>
+                    <h3>Audio Experience</h3>
+                    <p>Simply scan the QR code on your vase to unlock calming nature sounds, plant care tips, or your favorite relaxing playlists.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>Smart Technology</h3>
+                    <p>Seamlessly integrated technology that enhances your plant experience without overwhelming the natural beauty of your green companion.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🏡</span>
+                    <h3>Perfect for Adults</h3>
+                    <p>Designed specifically for busy professionals aged 30-40 who want to bring more nature and mindfulness into their daily routine.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">💚</span>
+                    <h3>Wellness Focused</h3>
+                    <p>Combines the mental health benefits of plants with the therapeutic power of sound for a complete wellness experience.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎁</span>
+                    <h3>Ready to Gift</h3>
+                    <p>Beautiful packaging makes Leaf Link the perfect gift for plant enthusiasts, new homeowners, or anyone seeking tranquility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+        <div class="how-it-works-container">
+            <h2 class="section-title">How Leaf Link Works</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Unbox Your Plant</h3>
+                    <p>Receive your carefully packaged plant in its beautiful smart vase, ready to enhance your space.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Scan the Code</h3>
+                    <p>Use your smartphone to scan the unique QR code on your vase - no app download required.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Enjoy the Experience</h3>
+                    <p>Listen to nature sounds, plant care guidance, or calming audio content through the vase's built-in speaker.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Customize Your Content</h3>
+                    <p>Access our online portal to personalize your audio experience and discover new content regularly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section" id="updates">
+        <div class="newsletter-container">
+            <h2>Stay Connected with Leaf Link</h2>
+            <p>Be the first to know about new plant varieties, exclusive audio content, and special offers. Join our community of plant lovers who are embracing the future of indoor gardening.</p>
+            
+            <form class="newsletter-form">
+                <div class="form-grid">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number (Optional)">
+                    <select>
+                        <option value="">Interest Level</option>
+                        <option value="product-updates">Product Updates</option>
+                        <option value="early-access">Early Access</option>
+                        <option value="questions">I Have Questions</option>
+                        <option value="wholesale">Wholesale Inquiry</option>
+                    </select>
+                </div>
+                <textarea placeholder="Any questions or special requests? We'd love to hear from you!"></textarea>
+                <button type="submit" class="btn btn-secondary">Join the Leaf Link Community</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer .logo">
+            <span class="leaf-icon">🍃</span>
+            Leaf Link
+            <span class="leaf-icon">🍃</span>
+        </div>
+        <p>Where nature meets technology, and every plant tells a story through sound.</p>
+    </footer>
+</body>
+</html>
