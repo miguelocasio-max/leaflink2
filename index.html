@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaf Link - Plants That Speak to Your Soul</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
+    <link 
+    <style
         * {
             margin: 0;
             padding: 0;
@@ -46,20 +45,25 @@
         }
         
         .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--forest-green);
             display: flex;
             align-items: center;
+            gap: 0.5rem;
             text-decoration: none;
         }
         
-        .logo-image {
-            width: 120px;
-            height: 120px;
-            object-fit: contain;
-            transition: transform 0.3s ease;
+        .leaf-icon {
+            color: var(--sage-green);
+            font-size: 2rem;
+            animation: gentle-sway 4s ease-in-out infinite;
         }
         
-        .logo-image:hover {
-            transform: scale(1.05);
+        @keyframes gentle-sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
         }
         
         .nav-menu {
@@ -157,11 +161,2667 @@
         }
         
         .product-icon {
+            font-size: 6rem;
+            margin: 2rem 0;
+            display: block;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .btn {
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, var(--sage-green), var(--forest-green));
+            color: white;
+            box-shadow: 0 6px 20px rgba(45, 80, 22, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.4);
+        }
+        
+        .features-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(135, 169, 107, 0.05) 100%);
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            text-align: center;
+            color: var(--forest-green);
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '🌸🌿🌸';
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            opacity: 0.6;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: center;
+            border: 2px solid var(--light-green);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.25);
+            border-color: var(--sage-green);
+        }
+        
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+        
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--forest-green);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: var(--warm-brown);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .how-it-works {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .step-card {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--sage-green), var(--gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 5px 15px rgba(135, 169, 107, 0.3);
+        }
+        
+        .step-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--forest-green);
+            margin-bottom: 1rem;
+        }
+        
+        .newsletter-section {
+            background: var(--forest-green);
+            color: var(--cream);
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter-section::before {
+            content: '🌿';
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            font-size: 8rem;
+            opacity: 0.05;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .newsletter-section::after {
+            content: '🍃';
+            position: absolute;
+            bottom: 20%;
+            right: 10%;
+            font-size: 6rem;
+            opacity: 0.05;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+        
+        .newsletter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .newsletter-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-section p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        .newsletter-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-form input,
+        .newsletter-form textarea {
+            padding: 1.2rem;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--forest-green);
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-form input:focus,
+        .newsletter-form textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(135, 169, 107, 0.3);
+        }
+        
+        .newsletter-form textarea {
+            grid-column: 1 / -1;
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .btn-secondary {
+            background: var(--gold);
+            color: var(--forest-green);
+            font-weight: 600;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--cream);
+            transform: translateY(-3px);
+        }
+        
+        .footer {
+            background: var(--warm-brown);
+            color: var(--cream);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .footer .logo {
+            color: var(--cream);
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header { padding: 1rem; flex-direction: column; gap: 1rem; }
+            .nav-menu { flex-wrap: wrap; justify-content: center; }
+            .hero-container { grid-template-columns: 1fr; text-align: center; }
+            .hero-content h1 { font-size: 3rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <span class="leaf-icon">🍃</span>
+            Leaf Link
+            <span class="leaf-icon">🍃</span>
+        </a>
+        <nav class="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#updates">Updates</a>
+        </nav>
+    </header>
+
+    <section class="hero-section" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Leaf Link</h1>
+                <p class="tagline">Plants That Speak to Your Soul</p>
+                <p>Experience the perfect harmony of nature and technology. Our innovative plant-in-a-box features a smart vase that plays personalized audio content when you scan the QR code. Transform your space into a living, breathing sanctuary that connects with you on a deeper level.</p>
+                <a href="#updates" class="btn btn-primary">Get Early Access</a>
+            </div>
+            <div class="hero-visual">
+                <div class="product-showcase">
+                    <h3>Smart Plant Experience</h3>
+                    <img src="image.png" alt="Smart Plant" class="product-icon">
+                    <p>Scan • Listen • Connect</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section" id="features">
+        <div class="features-container">
+            <h2 class="section-title">Why Plant Lovers Choose Leaf Link</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🌱</span>
+                    <h3>Premium Plants</h3>
+                    <p>Hand-selected, healthy plants perfect for your home environment. Each plant comes with care instructions and thrives in indoor conditions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎵</span>
+                    <h3>Audio Experience</h3>
+                    <p>Simply scan the QR code on your vase to unlock calming nature sounds, plant care tips, or your favorite relaxing playlists.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>Smart Technology</h3>
+                    <p>Seamlessly integrated technology that enhances your plant experience without overwhelming the natural beauty of your green companion.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🏡</span>
+                    <h3>Perfect for Adults</h3>
+                    <p>Designed specifically for busy professionals aged 30-40 who want to bring more nature and mindfulness into their daily routine.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">💚</span>
+                    <h3>Wellness Focused</h3>
+                    <p>Combines the mental health benefits of plants with the therapeutic power of sound for a complete wellness experience.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎁</span>
+                    <h3>Ready to Gift</h3>
+                    <p>Beautiful packaging makes Leaf Link the perfect gift for plant enthusiasts, new homeowners, or anyone seeking tranquility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+        <h2 class="section-title">How Leaf Link Works</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Unbox Your Plant</h3>
+                <p>Receive your carefully packaged plant in its beautiful smart vase, ready to enhance your space.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Scan the Code</h3>
+                <p>Use your smartphone to scan the unique QR code on your vase - no app download required.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Enjoy the Experience</h3>
+                <p>Listen to nature sounds, plant care guidance, or calming audio content through the vase's built-in speaker.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h3>Customize Your Content</h3>
+                <p>Access our online portal to personalize your audio experience and discover new content regularly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section" id="updates">
+        <div class="newsletter-container">
+            <h2>Stay Connected with Leaf Link</h2>
+            <p>Be the first to know about new plant varieties, exclusive audio content, and special offers. Join our community of plant lovers who are embracing the future of indoor gardening.</p>
+            
+            <form class="newsletter-form">
+                <div class="form-grid">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number (Optional)">
+                    <select style="padding: 1.2rem; border: none; border-radius: 15px; font-family: 'Lora', serif; font-size: 1.1rem; background: rgba(255, 255, 255, 0.9); color: var(--forest-green);">
+                        <option value="">Interest Level</option>
+                        <option value="product-updates">Product Updates</option>
+                        <option value="early-access">Early Access</option>
+                        <option value="questions">I Have Questions</option>
+                        <option value="wholesale">Wholesale Inquiry</option>
+                    </select>
+                </div>
+                <textarea placeholder="Any questions or special requests? We'd love to hear from you!"></textarea>
+                <button type="submit" class="btn btn-secondary">Join the Leaf Link Community</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="logo">
+            <span class="leaf-icon">🍃</span>
+            Leaf Link
+            <span class="leaf-icon">🍃</span>
+        </div>
+        <p>Where nature meets technology, and every plant tells a story through sound.</p>
+    </footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Link - Plants That Speak to Your Soul</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --forest-green: #2d5016;
+            --sage-green: #87a96b;
+            --light-green: #c9d1c8;
+            --warm-brown: #8b4513;
+            --light-brown: #d2b48c;
+            --cream: #f5f5dc;
+            --gold: #daa520;
+        }
+        
+        body {
+            font-family: 'Lora', serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light-green) 100%);
+            color: var(--forest-green);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(45, 80, 22, 0.15);
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--forest-green);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-image {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+        
+        .leaf-icon {
+            color: var(--sage-green);
+            font-size: 2rem;
+            animation: gentle-sway 4s ease-in-out infinite;
+        }
+        
+        @keyframes gentle-sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--forest-green);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+        
+        .nav-menu a:hover {
+            background: var(--light-green);
+            color: var(--sage-green);
+        }
+        
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            background: radial-gradient(ellipse at center, rgba(135, 169, 107, 0.1) 0%, transparent 70%);
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: var(--forest-green);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-content .tagline {
+            font-size: 1.8rem;
+            color: var(--warm-brown);
+            margin-bottom: 2rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.85;
+            line-height: 1.8;
+        }
+        
+        .hero-visual {
+            text-align: center;
+            position: relative;
+        }
+        
+        .product-showcase {
+            background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
+            border-radius: 30px;
+            padding: 3rem 2rem;
+            color: white;
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-showcase::before {
+            content: '🌿🎵🌿';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+        
+        .product-showcase h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .product-image {
             width: 200px;
             height: 200px;
-            margin: 2rem auto;
-            display: block;
+            background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=400&fit=crop&crop=center');
+            background-size: cover;
+            background-position: center;
             border-radius: 20px;
+            margin: 0 auto 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 3px solid rgba(255,255,255,0.2);
+        }
+        
+        .scan-text {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, var(--sage-green), var(--forest-green));
+            color: white;
+            box-shadow: 0 6px 20px rgba(45, 80, 22, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.4);
+        }
+        
+        .shop-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(245, 245, 220, 0.8) 0%, rgba(201, 209, 200, 0.3) 100%);
+        }
+        
+        .shop-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            text-align: center;
+            color: var(--forest-green);
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '🌸🌿🌸';
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            opacity: 0.6;
+        }
+        
+        .product-detail {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 30px;
+            padding: 4rem;
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.15);
+            border: 2px solid var(--light-green);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        
+        .product-gallery {
+            text-align: center;
+        }
+        
+        .main-product-image {
+            width: 300px;
+            height: 300px;
+            background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=600&fit=crop&crop=center');
+            background-size: cover;
+            background-position: center;
+            border-radius: 25px;
+            margin: 0 auto 2rem;
+            box-shadow: 0 15px 40px rgba(45, 80, 22, 0.2);
+            border: 3px solid var(--light-green);
+        }
+        
+        .product-thumbnails {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .thumbnail {
+            width: 60px;
+            height: 60px;
+            background: var(--light-green);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .thumbnail:hover {
+            transform: scale(1.1);
+            background: var(--sage-green);
+            color: white;
+        }
+        
+        .product-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--forest-green);
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        
+        .product-description {
+            font-size: 1.2rem;
+            color: var(--warm-brown);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .product-features {
+            list-style: none;
+            margin-bottom: 3rem;
+        }
+        
+        .product-features li {
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .product-features li::before {
+            content: '✓';
+            color: var(--sage-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .quantity-selector label {
+            font-weight: 500;
+            color: var(--forest-green);
+        }
+        
+        .quantity-input {
+            width: 80px;
+            padding: 0.8rem;
+            border: 2px solid var(--light-green);
+            border-radius: 10px;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        .btn-buy {
+            background: linear-gradient(45deg, var(--gold), #ffd700);
+            color: var(--forest-green);
+            font-weight: 600;
+            font-size: 1.3rem;
+            padding: 1.5rem 4rem;
+            margin-right: 1rem;
+        }
+        
+        .btn-buy:hover {
+            background: linear-gradient(45deg, #ffd700, var(--gold));
+            transform: translateY(-4px);
+        }
+        
+        .checkout-section {
+            background: var(--forest-green);
+            color: var(--cream);
+            padding: 6rem 2rem;
+            display: none;
+        }
+        
+        .checkout-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .checkout-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .checkout-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 4rem;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .form-section {
+            margin-bottom: 3rem;
+        }
+        
+        .form-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--gold);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--cream);
+        }
+        
+        .checkout-form input,
+        .checkout-form select {
+            padding: 1.2rem;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--forest-green);
+            transition: all 0.3s ease;
+        }
+        
+        .checkout-form input:focus,
+        .checkout-form select:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.3);
+        }
+        
+        .order-summary {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+        }
+        
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .order-item:last-child {
+            border-bottom: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+        
+        .btn-complete {
+            background: linear-gradient(45deg, var(--gold), #ffd700);
+            color: var(--forest-green);
+            font-weight: 600;
+            font-size: 1.4rem;
+            padding: 1.5rem 4rem;
+            width: 100%;
+        }
+        
+        .features-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(135, 169, 107, 0.05) 100%);
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: center;
+            border: 2px solid var(--light-green);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.25);
+            border-color: var(--sage-green);
+        }
+        
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+        
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--forest-green);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: var(--warm-brown);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .newsletter-section {
+            background: var(--warm-brown);
+            color: var(--cream);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .newsletter-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-section p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        
+        .newsletter-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-form input,
+        .newsletter-form textarea,
+        .newsletter-form select {
+            padding: 1.2rem;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--forest-green);
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-form textarea {
+            grid-column: 1 / -1;
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .btn-secondary {
+            background: var(--gold);
+            color: var(--forest-green);
+            font-weight: 600;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--cream);
+            transform: translateY(-3px);
+        }
+        
+        .footer {
+            background: var(--forest-green);
+            color: var(--cream);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .footer .logo {
+            color: var(--cream);
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header { padding: 1rem; flex-direction: column; gap: 1rem; }
+            .nav-menu { flex-wrap: wrap; justify-content: center; }
+            .hero-container { grid-template-columns: 1fr; text-align: center; }
+            .hero-content h1 { font-size: 3rem; }
+            .product-detail { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+    <a href="#" class="logo">
+        <img src="leaflinklogo.png" alt="Leaf Link Logo" class="logo-image">
+    </a>
+    <nav class="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#updates">Updates</a>
+    </nav>
+</header>
+
+    <section class="hero-section" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Leaf Link</h1>
+                <p class="tagline">Plants That Speak to Your Soul</p>
+                <p>Experience the perfect harmony of nature and technology. Our innovative plant-in-a-box features a smart vase that plays personalized audio content when you scan the QR code. Transform your space into a living, breathing sanctuary that connects with you on a deeper level.</p>
+                <a href="#shop" class="btn btn-primary">Shop Now - $20</a>
+            </div>
+            <div class="hero-visual">
+                <div class="product-showcase">
+                    <h3>Smart Plant Experience</h3>
+                    <div class="product-image"></div>
+                    <p class="scan-text">Scan • Listen • Connect</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+        <div class="shop-container">
+            <h2 class="section-title">Get Your Leaf Link Today</h2>
+            
+            <div class="product-detail">
+                <div class="product-gallery">
+                    <div class="main-product-image"></div>
+                    <div class="product-thumbnails">
+                        <div class="thumbnail">🌱</div>
+                        <div class="thumbnail">🎵</div>
+                        <div class="thumbnail">📱</div>
+                        <div class="thumbnail">📦</div>
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h2>Leaf Link Smart Plant</h2>
+                    <div class="price">$20.00</div>
+                    
+                    <p class="product-description">
+                        Transform your space with our revolutionary smart plant system. Each Leaf Link includes a beautiful, healthy plant in an elegant vase with built-in audio technology. Simply scan the QR code to unlock a world of relaxing sounds, plant care tips, and personalized content.
+                    </p>
+                    
+                    <ul class="product-features">
+                        <li>Premium indoor plant (variety may vary)</li>
+                        <li>Smart vase with built-in speaker</li>
+                        <li>QR code for instant audio access</li>
+                        <li>Care instructions included</li>
+                        <li>30-day satisfaction guarantee</li>
+                        <li>Free shipping on orders over $25</li>
+                    </ul>
+                    
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="10">
+                    </div>
+                    
+                    <button class="btn btn-buy" onclick="showCheckout()">Buy Now - $20</button>
+                    <a href="#updates" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="checkout-section" id="checkout">
+        <div class="checkout-container">
+            <h2>Complete Your Purchase</h2>
+            
+            <form class="checkout-form" onsubmit="processOrder(event)">
+                <div class="form-section">
+                    <h3>📦 Shipping Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <select id="state" required>
+                                <option value="">Select State</option>
+                                <option value="AL">Alabama</option>
+                                <option value="CA">California</option>
+                                <option value="FL">Florida</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="NY">New York</option>
+                                <option value="TX">Texas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="zipCode">ZIP Code</label>
+                            <input type="text" id="zipCode" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>💳 Payment Information</h3>
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="cardName">Name on Card</label>
+                            <input type="text" id="cardName" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h3 style="color: var(--gold); margin-bottom: 1rem;">Order Summary</h3>
+                    <div class="order-item">
+                        <span>Leaf Link Smart Plant x <span id="orderQuantity">1</span></span>
+                        <span id="itemTotal">$20.00</span>
+                    </div>
+                    <div class="order-item">
+                        <span>Shipping</span>
+                        <span>FREE</span>
+                    </div>
+                    <div class="order-item">
+                        <span>Tax</span>
+                        <span id="taxAmount">$1.60</span>
+                    </div>
+                    <div class="order-item">
+                        <span>Total</span>
+                        <span id="orderTotal">$21.60</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-complete">Complete Purchase</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="features-section" id="features">
+        <div class="features-container">
+            <h2 class="section-title">Why Plant Lovers Choose Leaf Link</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🌱</span>
+                    <h3>Premium Plants</h3>
+                    <p>Hand-selected, healthy plants perfect for your home environment. Each plant comes with care instructions and thrives in indoor conditions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎵</span>
+                    <h3>Audio Experience</h3>
+                    <p>Simply scan the QR code on your vase to unlock calming nature sounds, plant care tips, or your favorite relaxing playlists.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>Smart Technology</h3>
+                    <p>Seamlessly integrated technology that enhances your plant experience without overwhelming the natural beauty of your green companion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section" id="updates">
+        <div class="newsletter-container">
+            <h2>Stay Connected with Leaf Link</h2>
+            <p>Be the first to know about new plant varieties, exclusive audio content, and special offers.</p>
+            
+            <form class="newsletter-form">
+                <div class="form-grid">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number (Optional)">
+                    <select>
+                        <option value="">Interest Level</option>
+                        <option value="product-updates">Product Updates</option>
+                        <option value="early-access">Early Access</option>
+                        <option value="questions">I Have Questions</option>
+                    </select>
+                </div>
+                <textarea placeholder="Any questions or special requests? We'd love to hear from you!"></textarea>
+                <button type="submit" class="btn btn-secondary">Join the Leaf Link Community</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="logo">
+            <span class="leaf-icon">🍃</span>
+            Leaf Link
+            <span class="leaf-icon">🍃</span>
+        </div>
+        <p>Where nature meets technology, and every plant tells a story through sound.</p>
+    </footer>
+
+    <script>
+        function showCheckout() {
+            const quantity = document.getElementById('quantity').value;
+            const checkoutSection = document.getElementById('checkout');
+            
+            // Update order summary
+            document.getElementById('orderQuantity').textContent = quantity;
+            const itemTotal = 20 * quantity;
+            const tax = itemTotal * 0.08;
+            const total = itemTotal + tax;
+            
+            document.getElementById('itemTotal').textContent = `$${itemTotal.toFixed(2)}`;
+            document.getElementById('taxAmount').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('orderTotal').textContent = `$${total.toFixed(2)}`;
+            
+            // Show checkout section
+            checkoutSection.style.display = 'block';
+            checkoutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function processOrder(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const total = document.getElementById('orderTotal').textContent;
+            
+            // Simulate order processing
+            alert(`Thank you ${firstName} ${lastName}! Your order for ${total} has been received. You'll receive a confirmation email shortly with tracking information. Your Leaf Link will arrive in 3-5 business days!`);
+            
+            // Reset form
+            document.querySelector('.checkout-form').reset();
+            document.getElementById('checkout').style.display = 'none';
+            document.getElementById('quantity').value = 1;
+        }
+
+        // Update quantity in real-time
+        document.getElementById('quantity').addEventListener('change', function() {
+            const quantity = this.value;
+            const buyButton = document.querySelector('.btn-buy');
+            const itemPrice = 20;
+            const total = itemPrice * quantity;
+            buyButton.textContent = `Buy Now - $${total.toFixed(2)}`;
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Link - Plants That Speak to Your Soul</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --forest-green: #2d5016;
+            --sage-green: #87a96b;
+            --light-green: #c9d1c8;
+            --warm-brown: #8b4513;
+            --light-brown: #d2b48c;
+            --cream: #f5f5dc;
+            --gold: #daa520;
+        }
+        
+        body {
+            font-family: 'Lora', serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light-green) 100%);
+            color: var(--forest-green);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(45, 80, 22, 0.15);
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--forest-green);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .leaf-icon {
+            color: var(--sage-green);
+            font-size: 2rem;
+            animation: gentle-sway 4s ease-in-out infinite;
+        }
+        
+        @keyframes gentle-sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--forest-green);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+        
+        .nav-menu a:hover {
+            background: var(--light-green);
+            color: var(--sage-green);
+        }
+        
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            background: radial-gradient(ellipse at center, rgba(135, 169, 107, 0.1) 0%, transparent 70%);
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: var(--forest-green);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-content .tagline {
+            font-size: 1.8rem;
+            color: var(--warm-brown);
+            margin-bottom: 2rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.85;
+            line-height: 1.8;
+        }
+        
+        .hero-visual {
+            text-align: center;
+            position: relative;
+        }
+        
+        .product-showcase {
+            background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
+            border-radius: 30px;
+            padding: 3rem 2rem;
+            color: white;
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-showcase::before {
+            content: '🌿🎵🌿';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+        
+        .product-showcase h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .product-image {
+            width: 200px;
+            height: 200px;
+            background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=400&fit=crop&crop=center');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            margin: 0 auto 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 3px solid rgba(255,255,255,0.2);
+        }
+        
+        .scan-text {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, var(--sage-green), var(--forest-green));
+            color: white;
+            box-shadow: 0 6px 20px rgba(45, 80, 22, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.4);
+        }
+        
+        .reviews-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(245, 245, 220, 0.6) 0%, rgba(201, 209, 200, 0.4) 100%);
+        }
+        
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            text-align: center;
+            color: var(--forest-green);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '⭐🌿⭐';
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            opacity: 0.6;
+        }
+        
+        .reviews-stats {
+            text-align: center;
+            margin-bottom: 4rem;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.1);
+        }
+        
+        .overall-rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .rating-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        
+        .stars {
+            font-size: 2rem;
+            color: var(--gold);
+        }
+        
+        .rating-text {
+            font-size: 1.2rem;
+            color: var(--warm-brown);
+            margin-bottom: 1rem;
+        }
+        
+        .total-reviews {
+            font-size: 1.1rem;
+            color: var(--forest-green);
+            opacity: 0.8;
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .review-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2.5rem;
+            border-radius: 25px;
+            border: 2px solid var(--light-green);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.1);
+        }
+        
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(45, 80, 22, 0.2);
+            border-color: var(--sage-green);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .reviewer-info h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--forest-green);
+            margin-bottom: 0.3rem;
+        }
+        
+        .reviewer-location {
+            font-size: 0.95rem;
+            color: var(--warm-brown);
+            opacity: 0.8;
+        }
+        
+        .review-rating {
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+        
+        .review-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--forest-green);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .review-date {
+            font-size: 0.9rem;
+            color: var(--warm-brown);
+            opacity: 0.7;
+        }
+        
+        .verified-purchase {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: var(--light-green);
+            color: var(--forest-green);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        
+        .write-review-section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 2px solid var(--light-green);
+            text-align: center;
+        }
+        
+        .write-review-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--forest-green);
+            margin-bottom: 1rem;
+        }
+        
+        .write-review-section p {
+            font-size: 1.1rem;
+            color: var(--warm-brown);
+            margin-bottom: 2rem;
+        }
+        
+        .shop-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(245, 245, 220, 0.8) 0%, rgba(201, 209, 200, 0.3) 100%);
+        }
+        
+        .shop-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product-detail {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 30px;
+            padding: 4rem;
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.15);
+            border: 2px solid var(--light-green);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        
+        .product-gallery {
+            text-align: center;
+        }
+        
+        .main-product-image {
+            width: 300px;
+            height: 300px;
+            background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=600&fit=crop&crop=center');
+            background-size: cover;
+            background-position: center;
+            border-radius: 25px;
+            margin: 0 auto 2rem;
+            box-shadow: 0 15px 40px rgba(45, 80, 22, 0.2);
+            border: 3px solid var(--light-green);
+        }
+        
+        .product-thumbnails {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .thumbnail {
+            width: 60px;
+            height: 60px;
+            background: var(--light-green);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .thumbnail:hover {
+            transform: scale(1.1);
+            background: var(--sage-green);
+            color: white;
+        }
+        
+        .product-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--forest-green);
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        
+        .product-description {
+            font-size: 1.2rem;
+            color: var(--warm-brown);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .product-features {
+            list-style: none;
+            margin-bottom: 3rem;
+        }
+        
+        .product-features li {
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .product-features li::before {
+            content: '✓';
+            color: var(--sage-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .quantity-selector label {
+            font-weight: 500;
+            color: var(--forest-green);
+        }
+        
+        .quantity-input {
+            width: 80px;
+            padding: 0.8rem;
+            border: 2px solid var(--light-green);
+            border-radius: 10px;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        .btn-buy {
+            background: linear-gradient(45deg, var(--gold), #ffd700);
+            color: var(--forest-green);
+            font-weight: 600;
+            font-size: 1.3rem;
+            padding: 1.5rem 4rem;
+            margin-right: 1rem;
+        }
+        
+        .btn-buy:hover {
+            background: linear-gradient(45deg, #ffd700, var(--gold));
+            transform: translateY(-4px);
+        }
+        
+        .checkout-section {
+            background: var(--forest-green);
+            color: var(--cream);
+            padding: 6rem 2rem;
+            display: none;
+        }
+        
+        .checkout-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .checkout-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .checkout-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 4rem;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .form-section {
+            margin-bottom: 3rem;
+        }
+        
+        .form-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--gold);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--cream);
+        }
+        
+        .checkout-form input,
+        .checkout-form select {
+            padding: 1.2rem;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--forest-green);
+            transition: all 0.3s ease;
+        }
+        
+        .checkout-form input:focus,
+        .checkout-form select:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.3);
+        }
+        
+        .order-summary {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+        }
+        
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .order-item:last-child {
+            border-bottom: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+        
+        .btn-complete {
+            background: linear-gradient(45deg, var(--gold), #ffd700);
+            color: var(--forest-green);
+            font-weight: 600;
+            font-size: 1.4rem;
+            padding: 1.5rem 4rem;
+            width: 100%;
+        }
+        
+        .features-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(135, 169, 107, 0.05) 100%);
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: center;
+            border: 2px solid var(--light-green);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.25);
+            border-color: var(--sage-green);
+        }
+        
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+        
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--forest-green);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: var(--warm-brown);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .newsletter-section {
+            background: var(--warm-brown);
+            color: var(--cream);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .newsletter-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-section p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        
+        .newsletter-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-form input,
+        .newsletter-form textarea,
+        .newsletter-form select {
+            padding: 1.2rem;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--forest-green);
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-form textarea {
+            grid-column: 1 / -1;
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .btn-secondary {
+            background: var(--gold);
+            color: var(--forest-green);
+            font-weight: 600;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--cream);
+            transform: translateY(-3px);
+        }
+        
+        .footer {
+            background: var(--forest-green);
+            color: var(--cream);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .footer .logo {
+            color: var(--cream);
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header { padding: 1rem; flex-direction: column; gap: 1rem; }
+            .nav-menu { flex-wrap: wrap; justify-content: center; }
+            .hero-container { grid-template-columns: 1fr; text-align: center; }
+            .hero-content h1 { font-size: 3rem; }
+            .product-detail { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2.5rem; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .overall-rating { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <span class="leaf-icon">🍃</span>
+            Leaf Link
+            <span class="leaf-icon">🍃</span>
+        </a>
+        <nav class="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#features">Features</a>
+            <a href="#updates">Updates</a>
+        </nav>
+    </header>
+
+    <section class="hero-section" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Leaf Link</h1>
+                <p class="tagline">Plants That Speak to Your Soul</p>
+                <p>Experience the perfect harmony of nature and technology. Our innovative plant-in-a-box features a smart vase that plays personalized audio content when you scan the QR code. Transform your space into a living, breathing sanctuary that connects with you on a deeper level.</p>
+                <a href="#shop" class="btn btn-primary">Shop Now - $20</a>
+            </div>
+            <div class="hero-visual">
+                <div class="product-showcase">
+                    <h3>Smart Plant Experience</h3>
+                    <div class="product-image"></div>
+                    <p class="scan-text">Scan • Listen • Connect</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section" id="reviews">
+        <div class="reviews-container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            
+            <div class="reviews-stats">
+                <div class="overall-rating">
+                    <span class="rating-number">4.8</span>
+                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p class="rating-text">Excellent - Based on verified purchases</p>
+                <p class="total-reviews">147 customer reviews</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h4>Sarah M.</h4>
+                            <p class="reviewer-location">Boston, MA</p>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">"Absolutely love my Leaf Link! The audio feature is so relaxing after a long day at work. The plant is healthy and beautiful, and the technology integration is seamless. Best purchase I've made this year!"</p>
+                    <p class="review-date">March 15, 2024</p>
+                    <span class="verified-purchase">✓ Verified Purchase</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h4>Michael R.</h4>
+                            <p class="reviewer-location">New York, NY</p>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">"Perfect for my apartment! The QR code feature works flawlessly, and I love listening to nature sounds while working from home. The plant care tips through audio are genius. Highly recommend!"</p>
+                    <p class="review-date">March 10, 2024</p>
+                    <span class="verified-purchase">✓ Verified Purchase</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h4>Jennifer L.</h4>
+                            <p class="reviewer-location">San Francisco, CA</p>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">"As someone who travels for work, the audio reminders for plant care have been a lifesaver. The sound quality is surprisingly good, and my guests are always amazed by the technology. Worth every penny!"</p>
+                    <p class="review-date">March 8, 2024</p>
+                    <span class="verified-purchase">✓ Verified Purchase</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h4>David K.</h4>
+                            <p class="reviewer-location">Chicago, IL</p>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">"Bought this as a housewarming gift for my sister, and she absolutely loves it! The combination of a beautiful plant with smart audio features is brilliant. Shipping was fast and packaging was perfect."</p>
+                    <p class="review-date">March 5, 2024</p>
+                    <span class="verified-purchase">✓ Verified Purchase</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h4>Amanda T.</h4>
+                            <p class="reviewer-location">Austin, TX</p>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">"Really innovative product! The plant arrived healthy and the vase is beautiful. The audio content is relaxing and helpful. Only wish there were more audio options, but overall very satisfied with my purchase."</p>
+                    <p class="review-date">March 2, 2024</p>
+                    <span class="verified-purchase">✓ Verified Purchase</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h4>Robert H.</h4>
+                            <p class="reviewer-location">Seattle, WA</p>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">"I'm not usually tech-savvy, but this was so easy to set up! Just scan and listen. The meditation sounds help me start my day peacefully. Great quality plant and excellent customer service too."</p>
+                    <p class="review-date">February 28, 2024</p>
+                    <span class="verified-purchase">✓ Verified Purchase</span>
+                </div>
+            </div>
+
+            <div class="write-review-section">
+                <h3>Share Your Experience</h3>
+                <p>Have you purchased a Leaf Link? We'd love to hear about your experience!</p>
+                <a href="#updates" class="btn btn-primary">Write a Review</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+        <div class="shop-container">
+            <h2 class="section-title">Get Your Leaf Link Today</h2>
+            
+            <div class="product-detail">
+                <div class="product-gallery">
+                    <div class="main-product-image"></div>
+                    <div class="product-thumbnails">
+                        <div class="thumbnail">🌱</div>
+                        <div class="thumbnail">🎵</div>
+                        <div class="thumbnail">📱</div>
+                        <div class="thumbnail">📦</div>
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h2>Leaf Link Smart Plant</h2>
+                    <div class="price">$20.00</div>
+                    
+                    <p class="product-description">
+                        Transform your space with our revolutionary smart plant system. Each Leaf Link includes a beautiful, healthy plant in an elegant vase with built-in audio technology. Simply scan the QR code to unlock a world of relaxing sounds, plant care tips, and personalized content.
+                    </p>
+                    
+                    <ul class="product-features">
+                        <li>Premium indoor plant (variety may vary)</li>
+                        <li>Smart vase with built-in speaker</li>
+                        <li>QR code for instant audio access</li>
+                        <li>Care instructions included</li>
+                        <li>30-day satisfaction guarantee</li>
+                        <li>Free shipping on orders over $25</li>
+                    </ul>
+                    
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="10">
+                    </div>
+                    
+                    <button class="btn btn-buy" onclick="showCheckout()">Buy Now - $20</button>
+                    <a href="#reviews" class="btn btn-primary">Read Reviews</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="checkout-section" id="checkout">
+        <div class="checkout-container">
+            <h2>Complete Your Purchase</h2>
+            
+            <form class="checkout-form" onsubmit="processOrder(event)">
+                <div class="form-section">
+                    <h3>📦 Shipping Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <select id="state" required>
+                                <option value="">Select State</option>
+                                <option value="AL">Alabama</option>
+                                <option value="CA">California</option>
+                                <option value="FL">Florida</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="NY">New York</option>
+                                <option value="TX">Texas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="zipCode">ZIP Code</label>
+                            <input type="text" id="zipCode" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>💳 Payment Information</h3>
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="cardName">Name on Card</label>
+                            <input type="text" id="cardName" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h3 style="color: var(--gold); margin-bottom: 1rem;">Order Summary</h3>
+                    <div class="order-item">
+                        <span>Leaf Link Smart Plant x <span id="orderQuantity">1</span></span>
+                        <span id="itemTotal">$20.00</span>
+                    </div>
+                    <div class="order-item">
+                        <span>Shipping</span>
+                        <span>FREE</span>
+                    </div>
+                    <div class="order-item">
+                        <span>Tax</span>
+                        <span id="taxAmount">$1.60</span>
+                    </div>
+                    <div class="order-item">
+                        <span>Total</span>
+                        <span id="orderTotal">$21.60</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-complete">Complete Purchase</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="features-section" id="features">
+        <div class="features-container">
+            <h2 class="section-title">Why Plant Lovers Choose Leaf Link</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🌱</span>
+                    <h3>Premium Plants</h3>
+                    <p>Hand-selected, healthy plants perfect for your home environment. Each plant comes with care instructions and thrives in indoor conditions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎵</span>
+                    <h3>Audio Experience</h3>
+                    <p>Simply scan the QR code on your vase to unlock calming nature sounds, plant care tips, or your favorite relaxing playlists.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>Smart Technology</h3>
+                    <p>Seamlessly integrated technology that enhances your plant experience without overwhelming the natural beauty of your green companion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section" id="updates">
+        <div class="newsletter-container">
+            <h2>Stay Connected with Leaf Link</h2>
+            <p>Be the first to know about new plant varieties, exclusive audio content, and special offers.</p>
+            
+            <form class="newsletter-form">
+                <div class="form-grid">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number (Optional)">
+                    <select>
+                        <option value="">Interest Level</option>
+                        <option value="product-updates">Product Updates</option>
+                        <option value="early-access">Early Access</option>
+                        <option value="questions">I Have Questions</option>
+                        <option value="write-review">Write a Review</option>
+                    </select>
+                </div>
+                <textarea placeholder="Any questions, special requests, or review you'd like to share? We'd love to hear from you!"></textarea>
+                <button type="submit" class="btn btn-secondary">Join the Leaf Link Community</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="logo">
+            <span class="leaf-icon">🍃</span>
+            Leaf Link
+            <span class="leaf-icon">🍃</span>
+        </div>
+        <p>Where nature meets technology, and every plant tells a story through sound.</p>
+    </footer>
+
+    <script>
+        function showCheckout() {
+            const quantity = document.getElementById('quantity').value;
+            const checkoutSection = document.getElementById('checkout');
+            
+            // Update order summary
+            document.getElementById('orderQuantity').textContent = quantity;
+            const itemTotal = 20 * quantity;
+            const tax = itemTotal * 0.08;
+            const total = itemTotal + tax;
+            
+            document.getElementById('itemTotal').textContent = `$${itemTotal.toFixed(2)}`;
+            document.getElementById('taxAmount').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('orderTotal').textContent = `$${total.toFixed(2)}`;
+            
+            // Show checkout section
+            checkoutSection.style.display = 'block';
+            checkoutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function processOrder(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const total = document.getElementById('orderTotal').textContent;
+            
+            // Simulate order processing
+            alert(`Thank you ${firstName} ${lastName}! Your order for ${total} has been received. You'll receive a confirmation email shortly with tracking information. Your Leaf Link will arrive in 3-5 business days!`);
+            
+            // Reset form
+            document.querySelector('.checkout-form').reset();
+            document.getElementById('checkout').style.display = 'none';
+            document.getElementById('quantity').value = 1;
+        }
+
+        // Update quantity in real-time
+        document.getElementById('quantity').addEventListener('change', function() {
+            const quantity = this.value;
+            const buyButton = document.querySelector('.btn-buy');
+            const itemPrice = 20;
+            const total = itemPrice * quantity;
+            buyButton.textContent = `Buy Now - $${total.toFixed(2)}`;
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Link - Plants That Speak to Your Soul</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --forest-green: #2d5016;
+            --sage-green: #87a96b;
+            --light-green: #c9d1c8;
+            --warm-brown: #8b4513;
+            --light-brown: #d2b48c;
+            --cream: #f5f5dc;
+            --gold: #daa520;
+        }
+        
+        body {
+            font-family: 'Lora', serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light-green) 100%);
+            color: var(--forest-green);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(45, 80, 22, 0.15);
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--forest-green);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .leaf-icon {
+            color: var(--sage-green);
+            font-size: 2rem;
+            animation: gentle-sway 4s ease-in-out infinite;
+        }
+        
+        @keyframes gentle-sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--forest-green);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+        
+        .nav-menu a:hover {
+            background: var(--light-green);
+            color: var(--sage-green);
+        }
+        
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            background: radial-gradient(ellipse at center, rgba(135, 169, 107, 0.1) 0%, transparent 70%);
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: var(--forest-green);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-content .tagline {
+            font-size: 1.8rem;
+            color: var(--warm-brown);
+            margin-bottom: 2rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.85;
+            line-height: 1.8;
+        }
+        
+        .hero-visual {
+            text-align: center;
+            position: relative;
+        }
+        
+        .product-showcase {
+            background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            color: white;
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-showcase::before {
+            content: '🌿🎵🌿';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+        
+        .product-showcase h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-icon {
+            font-size: 6rem;
+            margin: 2rem 0;
+            display: block;
             animation: float 6s ease-in-out infinite;
         }
         
@@ -339,6 +2999,26 @@
             overflow: hidden;
         }
         
+        .newsletter-section::before {
+            content: '🌿';
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            font-size: 8rem;
+            opacity: 0.05;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .newsletter-section::after {
+            content: '🍃';
+            position: absolute;
+            bottom: 20%;
+            right: 10%;
+            font-size: 6rem;
+            opacity: 0.05;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+        
         .newsletter-container {
             max-width: 800px;
             margin: 0 auto;
@@ -375,8 +3055,7 @@
         }
         
         .newsletter-form input,
-        .newsletter-form textarea,
-        .newsletter-form select {
+        .newsletter-form textarea {
             padding: 1.2rem;
             border: none;
             border-radius: 15px;
@@ -387,10 +3066,26 @@
             transition: all 0.3s ease;
         }
         
+        .newsletter-form input:focus,
+        .newsletter-form textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(135, 169, 107, 0.3);
+        }
+        
         .newsletter-form textarea {
             grid-column: 1 / -1;
             min-height: 120px;
             resize: vertical;
+        }
+        
+        .newsletter-form select {
+            padding: 1.2rem;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--forest-green);
         }
         
         .btn-secondary {
@@ -431,14 +3126,15 @@
             .form-grid { grid-template-columns: 1fr; }
             .section-title { font-size: 2.5rem; }
             .steps-grid { grid-template-columns: 1fr; }
-            .logo-image { width: 80px; height: 80px; }
         }
     </style>
 </head>
 <body>
     <header class="header">
         <a href="#" class="logo">
-            <img src="leaflinklogo.png" alt="Leaf Link Logo" class="logo-image">
+            <span class="leaf-icon">🍃</span>
+            Leaf Link
+            <span class="leaf-icon">🍃</span>
         </a>
         <nav class="nav-menu">
             <a href="#home">Home</a>
@@ -459,7 +3155,7 @@
             <div class="hero-visual">
                 <div class="product-showcase">
                     <h3>Smart Plant Experience</h3>
-                    <img src="leafimage.png" alt="Smart Plant" class="product-icon">
+                    <img src="image.png" alt="Smart Plant" class="product-icon">
                     <p>Scan • Listen • Connect</p>
                 </div>
             </div>
@@ -562,7 +3258,623 @@
     </section>
 
     <footer class="footer">
-        <div class="footer .logo">
+        <div class="logo">
+            <span class="leaf-icon">🍃</span>
+            Leaf Link
+            <span class="leaf-icon">🍃</span>
+        </div>
+        <p>Where nature meets technology, and every plant tells a story through sound.</p>
+    </footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Link - Plants That Speak to Your Soul</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --forest-green: #2d5016;
+            --sage-green: #87a96b;
+            --light-green: #c9d1c8;
+            --warm-brown: #8b4513;
+            --light-brown: #d2b48c;
+            --cream: #f5f5dc;
+            --gold: #daa520;
+        }
+        
+        body {
+            font-family: 'Lora', serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light-green) 100%);
+            color: var(--forest-green);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(45, 80, 22, 0.15);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-image {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .leaf-icon {
+            color: var(--sage-green);
+            font-size: 2rem;
+            animation: gentle-sway 4s ease-in-out infinite;
+        }
+        
+        @keyframes gentle-sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--forest-green);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+        
+        .nav-menu a:hover {
+            background: var(--light-green);
+            color: var(--sage-green);
+        }
+        
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            background: radial-gradient(ellipse at center, rgba(135, 169, 107, 0.1) 0%, transparent 70%);
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: var(--forest-green);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-content .tagline {
+            font-size: 1.8rem;
+            color: var(--warm-brown);
+            margin-bottom: 2rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.85;
+            line-height: 1.8;
+        }
+        
+        .hero-visual {
+            text-align: center;
+            position: relative;
+        }
+        
+        .product-showcase {
+            background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            color: white;
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-showcase::before {
+            content: '🌿🎵🌿';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+        
+        .product-showcase h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-icon {
+            font-size: 6rem;
+            margin: 2rem 0;
+            display: block;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .btn {
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, var(--sage-green), var(--forest-green));
+            color: white;
+            box-shadow: 0 6px 20px rgba(45, 80, 22, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.4);
+        }
+        
+        .features-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(135, 169, 107, 0.05) 100%);
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            text-align: center;
+            color: var(--forest-green);
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '🌸🌿🌸';
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            opacity: 0.6;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: center;
+            border: 2px solid var(--light-green);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.25);
+            border-color: var(--sage-green);
+        }
+        
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+        
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--forest-green);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: var(--warm-brown);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .how-it-works {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(245, 245, 220, 0.8) 0%, rgba(201, 209, 200, 0.3) 100%);
+        }
+        
+        .how-it-works-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .step-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: center;
+            border: 2px solid var(--light-green);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.1);
+        }
+        
+        .step-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.25);
+            border-color: var(--sage-green);
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--sage-green), var(--gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 5px 15px rgba(135, 169, 107, 0.3);
+        }
+        
+        .step-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--forest-green);
+            margin-bottom: 1.5rem;
+        }
+        
+        .step-card p {
+            color: var(--warm-brown);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .newsletter-section {
+            background: var(--forest-green);
+            color: var(--cream);
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter-section::before {
+            content: '🌿';
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            font-size: 8rem;
+            opacity: 0.05;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .newsletter-section::after {
+            content: '🍃';
+            position: absolute;
+            bottom: 20%;
+            right: 10%;
+            font-size: 6rem;
+            opacity: 0.05;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+        
+        .newsletter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .newsletter-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-section p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        .newsletter-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-form input,
+        .newsletter-form textarea {
+            padding: 1.2rem;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--forest-green);
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-form input:focus,
+        .newsletter-form textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(135, 169, 107, 0.3);
+        }
+        
+        .newsletter-form textarea {
+            grid-column: 1 / -1;
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .newsletter-form select {
+            padding: 1.2rem;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--forest-green);
+        }
+        
+        .btn-secondary {
+            background: var(--gold);
+            color: var(--forest-green);
+            font-weight: 600;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--cream);
+            transform: translateY(-3px);
+        }
+        
+        .footer {
+            background: var(--warm-brown);
+            color: var(--cream);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .footer .logo {
+            color: var(--cream);
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header { padding: 1rem; flex-direction: column; gap: 1rem; }
+            .nav-menu { flex-wrap: wrap; justify-content: center; }
+            .hero-container { grid-template-columns: 1fr; text-align: center; }
+            .hero-content h1 { font-size: 3rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2.5rem; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .logo-image { width: 80px; height: 80px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="leaflinklogo.png" alt="Leaf Link Logo" class="logo-image">
+        </a>
+        <nav class="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#updates">Updates</a>
+        </nav>
+    </header>
+
+    <section class="hero-section" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Leaf Link</h1>
+                <p class="tagline">Plants That Speak to Your Soul</p>
+                <p>Experience the perfect harmony of nature and technology. Our innovative plant-in-a-box features a smart vase that plays personalized audio content when you scan the QR code. Transform your space into a living, breathing sanctuary that connects with you on a deeper level.</p>
+                <a href="#updates" class="btn btn-primary">Get Early Access</a>
+            </div>
+            <div class="hero-visual">
+                <div class="product-showcase">
+                    <h3>Smart Plant Experience</h3>
+                    <img src="image.png" alt="Smart Plant" class="product-icon">
+                    <p>Scan • Listen • Connect</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section" id="features">
+        <div class="features-container">
+            <h2 class="section-title">Why Plant Lovers Choose Leaf Link</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🌱</span>
+                    <h3>Premium Plants</h3>
+                    <p>Hand-selected, healthy plants perfect for your home environment. Each plant comes with care instructions and thrives in indoor conditions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎵</span>
+                    <h3>Audio Experience</h3>
+                    <p>Simply scan the QR code on your vase to unlock calming nature sounds, plant care tips, or your favorite relaxing playlists.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>Smart Technology</h3>
+                    <p>Seamlessly integrated technology that enhances your plant experience without overwhelming the natural beauty of your green companion.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🏡</span>
+                    <h3>Perfect for Adults</h3>
+                    <p>Designed specifically for busy professionals aged 30-40 who want to bring more nature and mindfulness into their daily routine.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">💚</span>
+                    <h3>Wellness Focused</h3>
+                    <p>Combines the mental health benefits of plants with the therapeutic power of sound for a complete wellness experience.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎁</span>
+                    <h3>Ready to Gift</h3>
+                    <p>Beautiful packaging makes Leaf Link the perfect gift for plant enthusiasts, new homeowners, or anyone seeking tranquility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+        <div class="how-it-works-container">
+            <h2 class="section-title">How Leaf Link Works</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Unbox Your Plant</h3>
+                    <p>Receive your carefully packaged plant in its beautiful smart vase, ready to enhance your space.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Scan the Code</h3>
+                    <p>Use your smartphone to scan the unique QR code on your vase - no app download required.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Enjoy the Experience</h3>
+                    <p>Listen to nature sounds, plant care guidance, or calming audio content through the vase's built-in speaker.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Customize Your Content</h3>
+                    <p>Access our online portal to personalize your audio experience and discover new content regularly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section" id="updates">
+        <div class="newsletter-container">
+            <h2>Stay Connected with Leaf Link</h2>
+            <p>Be the first to know about new plant varieties, exclusive audio content, and special offers. Join our community of plant lovers who are embracing the future of indoor gardening.</p>
+            
+            <form class="newsletter-form">
+                <div class="form-grid">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number (Optional)">
+                    <select>
+                        <option value="">Interest Level</option>
+                        <option value="product-updates">Product Updates</option>
+                        <option value="early-access">Early Access</option>
+                        <option value="questions">I Have Questions</option>
+                        <option value="wholesale">Wholesale Inquiry</option>
+                    </select>
+                </div>
+                <textarea placeholder="Any questions or special requests? We'd love to hear from you!"></textarea>
+                <button type="submit" class="btn btn-secondary">Join the Leaf Link Community</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="logo">
             <span class="leaf-icon">🍃</span>
             Leaf Link
             <span class="leaf-icon">🍃</span>
